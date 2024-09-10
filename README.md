@@ -7,15 +7,11 @@
 
 ## Run Server:
 
-    ```bash
     ruby server.rb
-    ```
 
 ## Run Client:
 
-    ```bash
     ruby client.rb
-    ```
 
 - Enter the server's IP address (use `127.0.0.1` if on the same machine).
 
