@@ -3,19 +3,15 @@
 **Requirements:** Ruby installed on your computer.
 
 ## Setup:
-- Save `server.rb` and `client.rb` in the same folder.
-- Open Terminal and navigate to the folder.
+- Clone `server.rb` and `client.rb` in the same folder.
 
-## Running the Server:
-- Run the following command to start the server:
+## Run Server:
 
     ```bash
     ruby server.rb
     ```
 
-## Running the Client:
-- Open another terminal.
-- Run the following command:
+## Run Client:
 
     ```bash
     ruby client.rb
