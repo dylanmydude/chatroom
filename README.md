@@ -13,6 +13,6 @@
 
     ruby client.rb
 
-- Enter the server's IP address (use `127.0.0.1` if on the same machine).
+- Enter the server's IP address (use `127.0.0.1` if testing on the same machine).
 
-**Exit:** Type `exit` in the client to leave the chatroom.
+- Type `exit` in the client to leave the chatroom.
