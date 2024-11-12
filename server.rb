@@ -1,7 +1,6 @@
 require 'socket'
 require 'time'
 
-# ANSI colour codes for different users
 USER_COLOURS = [
   "\033[31m", # Red
   "\033[32m", # Green
@@ -17,16 +16,15 @@ USER_COLOURS = [
   "\033[96m"  # Light Cyan
 ]
 
-RESET_COLOR = "\033[0m"  # Reset to default colour
+RESET_COLOR = "\033[0m"
 
 server = TCPServer.new('0.0.0.0', 12345) # Bind to all network interfaces
 clients = []
-usernames = {} # To keep track of client usernames
-user_colours = {} # To keep track of each user's assigned colour
+usernames = {}
+user_colours = {}
 
 puts "Chatroom server started. Waiting for clients to connect..."
 
-# Method to broadcast messages to all clients
 def broadcast(clients, sender, message, sender_color)
   timestamp = Time.now.strftime("%H:%M:%S")
   formatted_message = "#{sender_color}#{sender} (#{timestamp}): #{message}#{RESET_COLOR}"
@@ -38,8 +36,8 @@ end
 loop do
   client = server.accept
   clients << client
-  user_colours[client] = USER_COLOURS[clients.size % USER_COLOURS.size] # Assign a colour
-  usernames[client] = client.peeraddr[2] # Default username is the IP address
+  user_colours[client] = USER_COLOURS[clients.size % USER_COLOURS.size]
+  usernames[client] = client.peeraddr[2]
   puts "New client connected: #{usernames[client]}"
 
   Thread.new(client) do |conn|
@@ -52,12 +50,12 @@ loop do
 
         case message
         when '/help'
-          conn.puts "\033[36m\n=========* Commands *=============\n" +
-                    "= Type 'exit' to leave the chatroom =\n" +
-                    "= /users to list all users         =\n" +
-                    "= /nick new_name to change nickname =\n" +
-                    "= /help to list all commands        =\n" +
-                    "===================================\033[0m"
+          conn.puts "\033[36m\n=========* Commands *===============\n" +
+                    "= Type 'exit' to leave the chatroom \n" +
+                    "= /users to list all users         \n" +
+                    "= /nick new_name to change nickname \n" +
+                    "= /help to list all commands        \n" +
+                    "====================================\033[0m"
         when '/users'
           conn.puts "Connected users: #{usernames.values.join(', ')}"
         when /^\/nick\s+(.+)/
