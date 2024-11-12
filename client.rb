@@ -3,12 +3,12 @@ require 'time'
 
 def show_commands
   puts "\033[36m"
-  puts "\n=========* Commands *============="
-  puts "= Type 'exit' to leave the chatroom ="
-  puts "= /users to list all users         ="
-  puts "= /nick new_name to change nickname ="
-  puts "= /help to list all commands        ="
-  puts "===================================\033[0m"
+  puts "\n=========* Commands *==============="
+  puts "= Type 'exit' to leave the chatroom "
+  puts "= /users to list all users         "
+  puts "= /nick new_name to change nickname "
+  puts "= /help to list all commands        "
+  puts "====================================\033[0m"
 end
 
 puts "Enter the server's IP address: "
