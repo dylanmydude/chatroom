@@ -15,4 +15,6 @@
 
 - Enter the server's IP address (use `127.0.0.1` if testing on the same machine).
 
+- /help to list commands.
+
 - Type `exit` in the client to leave the chatroom.
