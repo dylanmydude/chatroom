@@ -13,7 +13,7 @@
 
     ruby client.rb
 
-- Enter the server's IP address (use `127.0.0.1` if testing on the same machine).
+- Enter the server's IP address (use `127.0.0.1` if testing on the same machine and run another client.rb in a separate terminal window).
 
 - /help to list commands.
 
