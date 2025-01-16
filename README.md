@@ -18,3 +18,8 @@
 - /help to list commands.
 
 - Type `exit` in the client to leave the chatroom.
+
+  future content:
+  - add file sharing
+  - add push to talk
+  - make into extension??
