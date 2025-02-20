@@ -21,5 +21,5 @@
 
   future content:
   - add file sharing
-  - add push to talk
-  - make into extension??
+  - create as extension?
+  - recreate as 90's ui based
